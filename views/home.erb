@@ -1,1 +1,17 @@
-<%= @data.inspect %>
+<h1>Citibike Station List </h1>
+
+<ul>
+  <% @data.each do |station| %>
+    <li>Name (<i>lat, long</i>): 
+      <h3>
+        <%= station["name"] %> 
+          <span style="font-weight:normal; font-style:italic;">
+            (<%= station["lat"]%>, 
+            <%= station["lng"]%>)
+          </span>
+      </h3>
+    </li>
+  <% end %>
+</ul>
+
+<!-- <%= @data.inspect %> -->
